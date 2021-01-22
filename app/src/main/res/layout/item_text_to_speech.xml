@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:foreground="?attr/selectableItemBackground"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15sp"
+            android:background="@drawable/rectqngle"
+            >
+
+            <TextView
+                android:id="@+id/timestamp_itemtts"
+                android:text="TimeStamp"
+                style="@style/timestamp_style"/>
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:ellipsize="end"
+                android:layout_height="1dp"
+                android:background="#4a5a71"
+                android:layout_below="@+id/timestamp_itemtts"
+                android:orientation="vertical">
+
+            </LinearLayout>
+            <TextView
+
+                android:id="@+id/text_itemtts"
+                android:text="Text"
+                android:maxLines="3"
+                android:ellipsize="end"
+                style="@style/text_style"
+                android:layout_below="@id/ll"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

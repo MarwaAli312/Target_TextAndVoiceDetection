@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpeechToTextActivity_Google"
+    android:gravity="center"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/header_bg"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/header_bg"/>
+
+
+
+    <Button
+        android:id="@+id/btnlang_stt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Language"/>
+    <EditText
+        android:id="@+id/edtext_stt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your text"/>
+
+    <ImageButton
+        android:id="@+id/btnspeak_stt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_edit"
+        android:backgroundTint="@color/colorSecondary"/>
+</RelativeLayout>

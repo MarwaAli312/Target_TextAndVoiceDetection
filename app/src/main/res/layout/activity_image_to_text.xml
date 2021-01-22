@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageToTextActivity"
+    android:background="@color/light_grey"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/header_bg"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/header_bg" />
+
+
+
+    <LinearLayout
+        android:id="@+id/brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="end"
+        app:layout_constraintTop_toTopOf="@+id/header_bg">
+
+        <ImageView
+            android:id="@+id/title"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:minHeight="?actionBarSize"
+            android:padding="5dp"
+            android:src="@drawable/targetwhite"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:text="Target"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/preview"
+        style="@style/btnactadd"
+        android:layout_marginTop="20sp"
+        android:drawableLeft="@drawable/ic_image"
+        android:text="Preview"
+        app:iconTint="#2B2B2B" />
+    <TextView
+        style="@style/dashboarditem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detected Text: "
+        android:textColor="@color/dark_blue"
+        android:layout_below="@+id/preview"
+        android:id="@+id/regulartxt"
+        android:paddingStart="15dp"/>
+
+    <LinearLayout
+        android:layout_below="@+id/regulartxt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+
+                app:cardBackgroundColor="@color/white">
+
+                <EditText
+                    android:id="@+id/edresult_detection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Text Here"
+                    android:minLines="6"
+                    android:maxLines="10"
+                    android:gravity="top|left"
+                    android:scrollbars="vertical"
+                    android:inputType="textMultiLine|textAutoCorrect"
+                   />
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/detect_detection"
+                style="@style/btngeneric"
+                android:layout_width="wrap_content"
+                android:text="Add Photo"
+                android:drawableLeft="@drawable/ic_add_photo"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/dashboarditem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Image Preview: "
+                    android:textColor="@color/dark_blue" />
+
+                <ImageView
+                    android:id="@+id/imgpreview_detection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxHeight="250dp" />
+                <com.github.chrisbanes.photoview.PhotoView
+                    android:id="@+id/photo_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/history_imgtt"
+        style="@style/fabtn"
+        android:text="@string/historyfab"
+        app:icon="@drawable/ic_history"
+        app:iconTint="@color/colorPrimary" />
+
+
+</RelativeLayout>

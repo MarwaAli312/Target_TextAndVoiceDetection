@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:id="@+id/imagett_container"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_margin="0dp"
+
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:id="@+id/cardview"
+        android:foreground="?attr/selectableItemBackground"
+
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl"
+            android:gravity="center"
+            android:padding="7sp"
+            android:background="@drawable/rectqngle"
+            >
+
+            <ImageView
+                android:id="@+id/image_item"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_launcher_background"
+                />
+            <TextView
+                android:id="@+id/timestamp_item"
+                style="@style/timestamp_style"
+                android:text="Timestamp"
+
+                />
+            <LinearLayout
+                android:id="@+id/khatt"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#4a5a71"
+                android:layout_below="@+id/timestamp_item"
+                android:layout_toRightOf="@+id/image_item"
+                android:orientation="vertical"></LinearLayout>
+
+            <TextView
+                android:id="@+id/text_item"
+                android:text="Text"
+                android:ellipsize="end"
+                android:maxLines="3"
+                style="@style/text_style"
+                android:layout_toRightOf="@+id/image_item"
+                android:layout_below="@+id/khatt"/>
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

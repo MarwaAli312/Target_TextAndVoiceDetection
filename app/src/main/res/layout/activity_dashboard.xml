@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity"
+    android:background="@color/light_grey"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/header_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/header_bg"/>
+    <TextView
+        android:id="@+id/tvnameuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_below="@+id/header_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginTop="16dp"
+        >
+        <ImageView
+            android:id="@+id/title"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:minHeight="?actionBarSize"
+            android:padding="5dp"
+            android:src="@drawable/targetwhite"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/tvtop_dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Target"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="200dp">
+        <LinearLayout
+
+            style="@style/lldash"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_dashboard"
+                app:cardCornerRadius="11dp"
+                style="@style/cardash">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="163dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                   >
+
+                    <ImageView
+                        style="@style/icondash"
+
+                        android:src="@drawable/ic_history" />
+
+                    <TextView
+                        style="@style/dashboarditem"
+                        android:text="History" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imgtt_dashboard"
+                app:cardCornerRadius="11dp"
+                style="@style/cardash">
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:src="@drawable/ic_image"
+                        style="@style/icondash" />
+                    <TextView
+                        android:text="Image to Text"
+                        style="@style/dashboarditem" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+
+            style="@style/lldash">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tts_dashboard"
+                app:cardCornerRadius="11dp"
+                style="@style/cardash">
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                   >
+                    <ImageView
+                        android:src="@drawable/ic_person_wave"
+                        style="@style/icondash"
+                        app:tint="@color/colorSecondary" />
+                    <TextView
+                        android:text="Text to Speech"
+                        style="@style/dashboarditem" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/stt_dashboard"
+                app:cardCornerRadius="11dp"
+                style="@style/cardash">
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                  >
+                    <ImageView
+                        android:src="@drawable/ic_mic"
+                        style="@style/icondash" />
+                    <TextView
+                        android:text="Speech to Text"
+                        style="@style/dashboarditem" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
