@@ -6,4 +6,4 @@ Android App that:
 -Detects text from speech
 -Converts speech to text
 
-You can find the screenshots the sreenshots folder (duh)
+You can find the screenshots the sreenshots folder (duh :D)
